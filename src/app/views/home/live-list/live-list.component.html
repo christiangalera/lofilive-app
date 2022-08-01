@@ -1,15 +1,25 @@
 <mat-tab-group mat-align-tabs="start" style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
     <mat-tab label="AO VIVO">
-        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
-            <div style="margin: 0.5%;">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+            <ng-container *ngFor="let lofi of lofiLive" style="margin: 0.5%;">
 
-                <mat-card class="example-card" 
-                fxFlex="0 1 calc(33.3% - 11px)"
+                <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)"
                 fxFlex.lt-md="0 1 calc(50% - 11px)"
                 fxFlex.lt-sm="100%">
-                    <mat-card-header>
+                    <mat-card-title class="mat-card-title-live">
+                      <div class="row">
+                        <p>
+                          <span style="font-size: 1.4rem;" fxFlex="100" fxLayoutAlign="start center">{{lofi.lofiName}}</span>
+                          <span fxFlex></span>
+                        </p>
+                          <p style="font-size: 1.0rem;">
+                            <span fxFlex="100" fxLayoutAlign="end center">- {{lofi.channelName}}</span>
+                           </p>
+
+
+                      </div>
                       
-                    </mat-card-header>
+                    </mat-card-title>
                    
                     <mat-card-content>
                       <p>
@@ -21,8 +31,8 @@
                     
                   </mat-card>
 
-            </div>
+            </ng-container>
         </div>
     </mat-tab>
-    <mat-tab label="CONCLUÍDAS">Content 2</mat-tab>
+    <mat-tab label="VIDEOS">Content 2</mat-tab>
 </mat-tab-group>
