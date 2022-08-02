@@ -1,3 +1,5 @@
+import { SafeResourceUrl } from "@angular/platform-browser";
+
 export class Lofi{
     id!: string;
     lofiName!: string;
@@ -5,4 +7,5 @@ export class Lofi{
     lofiLink!: string;
     videoStatus!: string;
     registrationDate!: string;
+    urlSafe!: SafeResourceUrl;
 }
