@@ -13,13 +13,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
+import {MatInputModule} from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LiveListComponent
+    LiveListComponent,
+    LiveFormDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -31,7 +37,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
+    LiveFormDialogComponent,
+    MatInputModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

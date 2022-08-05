@@ -2,8 +2,7 @@
     <mat-toolbar-row style="font-size: 1.5rem; height: 80px;">
       <span>LofiLive<mat-icon>headset</mat-icon></span>
       <span class="example-spacer"></span>
-      <button mat-raised-button><mat-icon>library_add</mat-icon>Live</button>
-
+      <button mat-raised-button (click)="addLofi()"><mat-icon>library_add</mat-icon>Live</button>
     </mat-toolbar-row>
   </mat-toolbar>
   <app-live-list></app-live-list>
